@@ -1,0 +1,170 @@
+export interface Product {
+  id: string;
+  name: string;
+  price: number;
+  originalPrice?: number;
+  image: string;
+  category: string;
+  description: string;
+  rating: number;
+  reviews: number;
+  badge?: "new" | "sale" | "bestseller";
+  inStock: boolean;
+}
+
+export const categories = [
+  "All",
+  "Electronics",
+  "Fashion",
+  "Home & Living",
+  "Beauty",
+  "Sports",
+] as const;
+
+export type Category = (typeof categories)[number];
+
+export const products: Product[] = [
+  {
+    id: "1",
+    name: "Wireless Noise-Canceling Headphones",
+    price: 299,
+    originalPrice: 349,
+    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&q=80",
+    category: "Electronics",
+    description: "Premium wireless headphones with active noise cancellation and 30-hour battery life.",
+    rating: 4.8,
+    reviews: 2341,
+    badge: "bestseller",
+    inStock: true,
+  },
+  {
+    id: "2",
+    name: "Minimalist Leather Watch",
+    price: 189,
+    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&q=80",
+    category: "Fashion",
+    description: "Elegant leather strap watch with sapphire crystal glass and Japanese movement.",
+    rating: 4.9,
+    reviews: 892,
+    badge: "new",
+    inStock: true,
+  },
+  {
+    id: "3",
+    name: "Smart Home Speaker",
+    price: 129,
+    originalPrice: 159,
+    image: "https://images.unsplash.com/photo-1543512214-318c7553f230?w=600&q=80",
+    category: "Electronics",
+    description: "Voice-controlled smart speaker with premium sound and home automation features.",
+    rating: 4.6,
+    reviews: 1567,
+    badge: "sale",
+    inStock: true,
+  },
+  {
+    id: "4",
+    name: "Organic Cotton T-Shirt",
+    price: 49,
+    image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80",
+    category: "Fashion",
+    description: "Sustainable, ultra-soft organic cotton tee with a relaxed fit.",
+    rating: 4.7,
+    reviews: 423,
+    inStock: true,
+  },
+  {
+    id: "5",
+    name: "Ceramic Plant Pot Set",
+    price: 79,
+    image: "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=600&q=80",
+    category: "Home & Living",
+    description: "Set of 3 handcrafted ceramic pots with drainage holes and saucers.",
+    rating: 4.5,
+    reviews: 234,
+    inStock: true,
+  },
+  {
+    id: "6",
+    name: "Natural Skincare Set",
+    price: 89,
+    originalPrice: 120,
+    image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&q=80",
+    category: "Beauty",
+    description: "Complete skincare routine with cleanser, toner, serum, and moisturizer.",
+    rating: 4.8,
+    reviews: 678,
+    badge: "sale",
+    inStock: true,
+  },
+  {
+    id: "7",
+    name: "Yoga Mat Premium",
+    price: 68,
+    image: "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=600&q=80",
+    category: "Sports",
+    description: "Eco-friendly, non-slip yoga mat with alignment guides.",
+    rating: 4.7,
+    reviews: 312,
+    badge: "new",
+    inStock: true,
+  },
+  {
+    id: "8",
+    name: "Portable Power Bank",
+    price: 59,
+    image: "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=600&q=80",
+    category: "Electronics",
+    description: "20000mAh fast-charging power bank with USB-C and wireless charging.",
+    rating: 4.6,
+    reviews: 1890,
+    inStock: true,
+  },
+  {
+    id: "9",
+    name: "Scented Candle Collection",
+    price: 45,
+    image: "https://images.unsplash.com/photo-1602028915047-37269d1a73f7?w=600&q=80",
+    category: "Home & Living",
+    description: "Set of 4 hand-poured soy candles with natural fragrances.",
+    rating: 4.4,
+    reviews: 156,
+    inStock: true,
+  },
+  {
+    id: "10",
+    name: "Running Shoes Pro",
+    price: 159,
+    originalPrice: 199,
+    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80",
+    category: "Sports",
+    description: "Lightweight performance running shoes with responsive cushioning.",
+    rating: 4.8,
+    reviews: 2156,
+    badge: "bestseller",
+    inStock: true,
+  },
+  {
+    id: "11",
+    name: "Silk Pillowcase Set",
+    price: 79,
+    image: "https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=600&q=80",
+    category: "Home & Living",
+    description: "Set of 2 mulberry silk pillowcases for healthier hair and skin.",
+    rating: 4.9,
+    reviews: 567,
+    badge: "new",
+    inStock: true,
+  },
+  {
+    id: "12",
+    name: "Vitamin C Serum",
+    price: 38,
+    image: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&q=80",
+    category: "Beauty",
+    description: "Brightening serum with 20% Vitamin C for radiant, even-toned skin.",
+    rating: 4.7,
+    reviews: 892,
+    inStock: true,
+  },
+];
